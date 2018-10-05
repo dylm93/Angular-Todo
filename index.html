@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app id ="ng-app">
+<head>
+	<title>Hello World, AngularJS - ViralPatel.net</title>
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+</head>
+<body>
+	
+	<input type="text" ng-model="sometext" />
+	<input type="date" ng-model="somedate" />
+
+    <h2 ng-show = "somedate" > {{ date }}</h2>
+    <button ng-click="todo = todo + sometext + somedate" ng-init="todo">Submit</button>
+    
+    <h4> TODO: {{ sometext | uppercase }} </h4>
+
+    <h6> Date: {{ somedate | date: 'medium' }}</h6>
+
+    <span ng-mouseover = "style={color:'blue', 'font-size': '20px'}" ng-mouseleave= "style={'background-color':'white'}" ng-init = "todo" ng-style="style">{{todo}} </span>
+	
+</body>
+</html>
+
